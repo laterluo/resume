@@ -1,0 +1,56 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+.clearfix::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+body{
+  background-color: #333;
+  color: yellow;
+}
+
+/* topNavBar */
+.topNavBar{
+  padding-top: 25px;
+}
+.topNavBar .logo{
+  float: left;
+  font-family: "Microsoft YaHei";
+  font-weight: bold;
+  font-size: 24px;
+  padding-left: 16px;
+}
+.topNavBar .logo .rs{
+  color: #e6686a;
+  margin-right: 5px;
+}
+.topNavBar .logo .card{
+  color: #9A9DA2;
+}
+.topNavBar .nav{
+  float: right;
+}
+.topNavBar .nav li{
+  float: left;
+  margin: 0 16px;
+}
+.topNavBar .nav li a{
+  font-size: 12px;
+  font-weight: bold;
+  color: #b7b7b7;
+  padding: 5px 0;
+  display: block;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+}
+.topNavBar .nav li a:hover{
+  border-bottom: 3px solid #DC6465;
+}
