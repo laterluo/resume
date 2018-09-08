@@ -82,38 +82,92 @@
           </a>
       </footer>
     </div>
-    <a class="button" href="#">下载 PDF 简历</a>
-    <p>
-      资深前端工程师，资深前端讲师，现在在 饥人谷 教前端课程。<br>
-      技能：前端开发，Rails 开发，Node.js 开发
+    <p class="download-wrapper">
+      <a class="downloadResume" href="#">下载 PDF 简历</a>
+    </p>
+    <p class="introduce">
+        前端开发是创建Web页面或app等前端界面呈现给用户的过程。前端开发通过HTML，CSS及JavaScript <br>
+        以及衍生出来的各种技术、框架、解决方案，来实现互联网产品的用户界面交互<br>
+        它从网页制作演变而来，名称上有很明显的时代特征。
     </p>
   </main>
 
-  <section>
+  <section class="skill">
     <h2>技能</h2>
-    <ol>
-      <li>HTML5 &amp; CSS3</li>
-      <li>JavaScript</li>
-      <li>jQuery</li>
-      <li>Vue</li>
-      <li>React</li>
-      <li>HTTP</li>
+    <ol class="clearfix">
+      <li>
+        <h3>HTML5 &amp; CSS3</h3>
+        <div class="progressBar">
+          <div class="progress" style="width: 85%;"></div> 
+        </div>
+      </li>
+      <li>
+        <h3>JavaScript</h3>
+        <div class="progressBar">
+          <div class="progress" style="width: 60%;"></div> 
+        </div>
+      </li>
+      <li>
+        <h3>jQuery</h3>
+        <div class="progressBar">
+          <div class="progress" style="width: 70%;"></div> 
+        </div>
+      </li>
+      <li>
+        <h3>Vue</h3>
+        <div class="progressBar">
+          <div class="progress" style="width: 50%;"></div> 
+        </div>
+      </li>
+      <li>
+        <h3>React</h3>
+        <div class="progressBar">
+          <div class="progress" style="width: 82%;"></div> 
+        </div>
+      </li>
+      <li>
+        <h3>HTTP</h3>
+        <div class="progressBar">
+          <div class="progress" style="width: 75%;"></div> 
+        </div>
+      </li>
     </ol> 
   </section>
 
-  <section>
+  <section class="showreel">
     <h2>作品</h2>
     <nav>
-      <ol>
-        <li>所有</li>
-        <li>框架</li>
-        <li>原生</li>
+      <ol class="clearfix">
+        <li id="productionAll">所有作品</li>
+        <li id="productionFrame">框架作品</li>
+        <li id="productionNative">原生作品</li>
       </ol>
+      <div id="productionBar" class="bar state-1">
+        <div class="bar-inner"></div>
+      </div>
+
+      <script>
+        productionAll.onclick = function(){
+          productionBar.className = 'bar state-1'
+        }
+        productionFrame.onclick = function(){
+          productionBar.className = 'bar state-2'
+        }
+        productionNative.onclick = function(){
+          productionBar.className = 'bar state-3'
+        }
+      </script>
     </nav>
-    <div class="jobs">
-      <div class="big"></div>
-      <div class="small"></div>
-      <div class="small"></div>
+    <div class="works">
+      <div class="big" style="top: 0; left: 0;">
+        <img src="./images/1.jpg" alt="">
+      </div>
+      <div class="small" style="top: 0; right: 0;">
+        <img src="./images/2.jpg" alt="">
+      </div>
+      <div class="small" style="bottom: 0; right: 0;">
+        <img src="./images/3.jpg" alt="">
+      </div>
     </div>
   </section>
   
