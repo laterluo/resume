@@ -5,9 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>我的个人简历</title>
+  <link rel="stylesheet" href="./loading.css">
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+  <div id="siteWelcome" class="site-welcome active">
+    <div class="loading"></div>
+  </div>
   <div class="topNavBar">
     <div class="topNavBar-inner clearfix">
       <a class="logo" href="#" alt="logo0">
@@ -172,5 +176,10 @@
   </section>
   
   <script src="//at.alicdn.com/t/font_828378_5psgk7e2gve.js"></script>
+  <script>
+    setTimeout(function(){
+      siteWelcome.classList.remove('active')
+    }, 2000)
+  </script>
 </body>
 </html>
