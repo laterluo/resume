@@ -31,6 +31,15 @@ body{
   top: 0;
   left: 0;
   width: 100%;
+  color: #b7b7b7;
+}
+.topNavBar.sticky{
+  background: white;
+  padding: 12px 0;
+  color: #3d4451;
+  transition: all .4s;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+  z-index: 1;
 }
 .topNavBar .logo{
   float: left;
@@ -50,21 +59,70 @@ body{
   float: right;
   margin-right: 34px;
 }
-.topNavBar .nav li{
+.topNavBar .nav>li{
   float: left;
   margin: 0 16px;
+  position: relative;
 }
-.topNavBar .nav li a{
-  font-size: 12px;
+.topNavBar .nav>li a{
+  font-size: 14px;
   font-weight: bold;
-  color: #b7b7b7;
+  color: inherit;
   padding: 5px 0;
   display: block;
   border-top: 3px solid transparent;
   border-bottom: 3px solid transparent;
+  position: relative;
 }
-.topNavBar .nav li a:hover{
-  border-bottom: 3px solid #DC6465;
+.topNavBar .nav>li.active > a::before{
+  content: '';
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #E6686A;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  animation: leftToRight .3s;
+}
+@keyframes leftToRight{
+  0%{
+    width: 0px;
+  }
+  100%{
+    width: 100%;
+  }
+}
+.topNavBar .nav>li .submenu{
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  color: #3d4451;
+  font-size: 14px;
+  padding: 0 30px 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.topNavBar .nav>li.active .submenu{
+  display: block;
+  animation: submenuSlide .3s;
+}
+@keyframes submenuSlide{
+  0%{
+    margin-right: 100%;
+  }
+  100%{
+    margin-right: 0;
+  }
+}
+.topNavBar .submenu li{
+  white-space: nowrap;
+  margin-top: 15px;
+  cursor: pointer;
+}
+.topNavBar .submenu li:hover{
+  color: #E6686A;
 }
 
 /* banner */
