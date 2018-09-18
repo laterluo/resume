@@ -74,7 +74,8 @@ body{
   border-bottom: 3px solid transparent;
   position: relative;
 }
-.topNavBar .nav>li.active > a::before{
+.topNavBar .nav>li.active > a::before,
+.topNavBar .nav>li.highlight > a::before{
   content: '';
   display: block;
   width: 100%;
@@ -280,18 +281,24 @@ section.skill .progressBar{
   background: #FAE1E1;
   border-radius: 5px;
   margin-top: 6px;
+  overflow: hidden;
 }
 section.skill .progress{
   height: 100%;
   background: #E6686A;
   width: 60%;
   border-radius: 5px;
+  transform: translateX(0);
+  transition: all 1s;
+}
+section.skill.offset .progress{
+  transform: translateX(-100%);
 }
 
 /* showreel */
 section.showreel{
   text-align: center;
-  margin-bottom: 300px;
+  margin-bottom: 100px;
 }
 section.showreel nav{
   display: inline-block;
@@ -336,4 +343,11 @@ section.showreel .works{
 section.showreel .works .big,
 section.showreel .works .small{
   position: absolute;
+}
+[data-x].offset{
+  transform: translateY(100px);
+}
+[data-x]{
+  transform: translateY(0);
+  transition: all 0.5s;
 }
